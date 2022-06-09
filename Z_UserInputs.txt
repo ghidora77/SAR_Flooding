@@ -1,0 +1,78 @@
+Utilized as a Copy and paste file with associated user inputs:
+
+
+
+### Flooding in Beira, Mozambique ###
+
+geometry = ee.Geometry.Polygon(
+    [[
+        [35.53377589953368, -19.6674648789114],
+        [34.50106105578368, -18.952058786515526],
+        [33.63314113390868, -19.87423907259203],
+        [34.74825343859618, -20.61123742951084]
+    ]]);
+
+before_start= '2019-03-01'
+before_end='2019-03-10'
+
+after_start='2019-03-10'
+after_end='2019-03-23'
+
+polarization = "VH" 
+pass_direction = "DESCENDING"
+difference_threshold = 1.25
+#relative_orbit = 79;
+
+center = [-19.7234, 34.598]
+zoom = 10
+
+### Hurricane Ira, New York ###
+
+geometry = ee.Geometry.Polygon(
+        [[[-73.99267046517294, 40.748220299126785],
+          [-73.99267046517294, 40.67014564926902],
+          [-73.90546648568075, 40.67014564926902],
+          [-73.90546648568075, 40.748220299126785]]]
+         )
+
+before_start= '2021-07-10'
+before_end='2021-08-26'
+
+# Now set the same parameters for AFTER the flood.
+after_start='2021-08-26'
+after_end='2021-10-26'
+
+polarization = "VV" 
+pass_direction = "ASCENDING"
+difference_threshold = 1
+#relative_orbit = 79;
+
+center = [40.71, -73.95] # New York
+
+zoom = 13
+
+
+### Hurricane Matthew, Virginia Beach ###
+
+geometry = ee.Geometry.Polygon(
+        [[[-76.13142917986967, 36.93464066464829],
+          [-76.13142917986967, 36.75110426723376],
+          [-75.94191501971342, 36.75110426723376],
+          [-75.94191501971342, 36.93464066464829]]]
+         )
+
+before_start='2016-09-26'
+before_end='2016-10-02'
+
+# Now set the same parameters for AFTER the flood.
+after_start='2016-10-09'
+after_end='2016-10-14'
+
+polarization = "VV" 
+pass_direction = "ASCENDING"
+difference_threshold = 1
+#relative_orbit = 79;
+
+center = [36.85, -76.03] # Va beach
+
+zoom = 13
