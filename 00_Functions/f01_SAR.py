@@ -1,6 +1,15 @@
+"""
+Primary SAR Function
+
+Returns:
+    Before and after filtered image
+"""
 import ee
-def SAR(aoi, polarization, pass_direction, difference_threshold,
-           before_start, before_end, after_start, after_end):
+def SAR(
+    aoi, polarization, pass_direction, 
+    difference_threshold, before_start, 
+    before_end, after_start, after_end
+    ):
 
     # Load and filter Sentinel-1 GRD data by predefined parameters 
     collection= (
@@ -19,8 +28,8 @@ def SAR(aoi, polarization, pass_direction, difference_threshold,
     after_collection = collection.filterDate(after_start,after_end)
 
     # Create a mosaic of selected tiles and clip to study area
-    before = before_collection.mosaic().clip(aoi);
-    after = after_collection.mosaic().clip(aoi);
+    before = before_collection.mosaic().clip(aoi)
+    after = after_collection.mosaic().clip(aoi)
 
     # Apply reduce the radar speckle by smoothing  
     smoothing_radius = 10;

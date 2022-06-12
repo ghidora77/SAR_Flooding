@@ -1,27 +1,32 @@
+"""
+All visualizations stored for each subfunction
+  
+"""
+
 def vizParamStore():
     
     floodVizParam = {
       'palette':"0000FF", 
-        'opacity': 0.4,
+      'opacity':0.4,
     }
     
     populationCountVis = {
-      'min': 0,
-      'max': 200.0,
-      'palette': ['060606','337663','337663','ffffff'],
+      'min':0,
+      'max':200.0,
+      'palette':['060606','337663','337663','ffffff'],
     }
     
     populationExposedVis = {
-      'min': 0,
-      'max': 200.0,
-      'palette': ['yellow', 'orange', 'red'],
-      'opacity': .3
+      'min':0,
+      'max':200.0,
+      'palette':['yellow', 'orange', 'red'],
+      'opacity':0.3
     }
     
     # MODIS Land Cover
     LCVis = {
-      'min': 1.0,
-      'max': 17.0,
+      'min':1.0,
+      'max':17.0,
       'palette': [
           '05450a', '086a10', '54a708', 
           '78d203', '009900', 'c6b044', 
@@ -33,15 +38,19 @@ def vizParamStore():
     }
     
     croplandVis = {
-      'min': 0,
-      'max': 14.0,
-      'palette': ['30b21c'],
-    };
+      'min':0,
+      'max':14.0,
+      'palette':['30b21c'],
+    }
     
     urbanVis = {
-      'min': 0,
-      'max': 13.0,
-      'palette' : ['grey'],
-        'opacity': .3
-    };
-    return floodVizParam, populationCountVis, populationExposedVis, LCVis, croplandVis, urbanVis
+      'min':0,
+      'max':13.0,
+      'palette':['grey'],
+      'opacity':0.3
+    }
+    
+    return (floodVizParam, populationCountVis, 
+            populationExposedVis, LCVis, 
+            croplandVis, urbanVis
+            )

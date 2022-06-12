@@ -1,3 +1,10 @@
+""" 
+Define Flood Extent
+
+Returns:
+    Flood extent and calculation of extent
+"""
+
 import ee
 
 def FloodExtent(before_filtered, after_filtered, difference_threshold, aoi, polarization):
@@ -58,7 +65,5 @@ def FloodExtent(before_filtered, after_filtered, difference_threshold, aoi, pola
       .divide(10000)
       .round()
     )
-    
-    
-    
+
     return difference, flooded, flood_area_ha

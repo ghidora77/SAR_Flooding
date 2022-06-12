@@ -1,3 +1,5 @@
+"""
+
 //------------------------------------- EXPORTS ------------------------------------//
 # Export flooded area as TIFF file 
 Export.image.toDrive({
@@ -25,7 +27,7 @@ Export.table.toDrive({
   description:'Flood_extent_vector',
   fileFormat:'SHP',
   fileNamePrefix:'flooded_vec'
-});
+})
 
 # Export auxcillary data as shp?
 # Exposed population density
@@ -36,7 +38,7 @@ Export.image.toDrive({
   fileNamePrefix:'population_exposed',
   region: aoi,
   maxPixels:1e10
-});
+})
 
 //---------------------------------- MAP PRODUCTION --------------------------------//
 
@@ -245,3 +247,5 @@ legend.add(panel);
  
 # add legend to map (alternatively you can also print the legend to the console)
 Map.add(legend);
+
+"""
